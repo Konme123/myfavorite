@@ -1,20 +1,10 @@
 
 
 
-document.querySelector("#show-login").addEventListener("click",function() {
-    document.querySelector(".popup").classList.add("active").classList.remove("active");
 
-});
 
-document.querySelector(".popup .close-btn").addEventListener("click",function(){
-  document.querySelector(".popup").classList.remove("active")
-});
 
-window.onkeydown = function(e){
-  if(e.keyCode == 27){ // if ESC key pressed
-    btn_close.click(e);
-  }
-} 
+
 dragElement(document.getElementById("mydiv"));
 
 
@@ -58,6 +48,37 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+let u = 'julius';
+let p = 'ilovefish';
+
+
+let container = document.querySelector('.container');
+let logContainer = document.querySelector('#mydiv');
+let logIn = 0;
+
+
+function submit(){
+  console.log(email.value);
+  console.log(password.value.length);
+  if(email.value == u && password.value == p){
+      container.style.filter = "blur(0px)";
+      logContainer.style.transform = "translateY(-100%)";
+      logIn = 1;
+      document.querySelector(".popup").classList.add("active")
+      document.querySelector(".iframe").classList.add("active")
+      
+
+  }else if(password.value.length < 8){
+      alert("Password must be 8 characters long");
+  }else{
+      alert("Wrong Username and Password");
+  }
+}
+
 
 
 

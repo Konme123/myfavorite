@@ -12,6 +12,8 @@ body{
 html{
     scroll-behavior: smooth;
     overflow: auto;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 
 #header{
@@ -22,20 +24,6 @@ html{
     background-position: center;
 }
 
-iframe {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    border: none;
-}
-
-iframe {
-    display: block;
-    width: 100%;
-    border: none;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
 
 
 .container{
@@ -55,7 +43,20 @@ iframe {
     width: 400px;
     height: 10px;
     padding: 20px 30px ;
+    
+
+ 
   }
+
+.iframe {
+    opacity: 0;
+ 
+}
+
+.iframe.active{
+ 
+    opacity: 100;
+}
 
   .center {
 
@@ -82,12 +83,12 @@ iframe {
   
   
   .popup {
-    
+  
    color: #000000;
     position: absolute;
     top: -15%;
     left: 50%;
-    opacity: 0;
+    opacity: 100;
   
     z-index: 3;
     
@@ -95,7 +96,7 @@ iframe {
     width: 400px;
     height: 400px;
     padding: 20px 30px ;
-    background:;
+    background-color: #f8eddd98;
     box-shadow: 2px 2px 5px 5px rgba(214, 214, 214, 0.15);
     border-radius: 10px;
     transition: top 0ms ease-in-out 200ms,
@@ -103,11 +104,13 @@ iframe {
                 transform 500ms ease-in-out 0ms;
                 
     box-shadow: 0px 10px 40px 0px rgba(255, 255, 255, 0.15);
+
+    overflow-y: hidden;
   }
   
   .popup.active {
     top: 50%;
-    opacity: 1;
+    opacity: 0;
     transform: translate(-50%,-50%) scale(1);
     transition: top 0ms ease-in-out 200ms,
                 opacity 400ms ease-in-out 0ms, 
@@ -121,26 +124,7 @@ iframe {
     background-color: #2196F3;
     color: #383838;
   }
-  
-  .popup .close-btn{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    background: ;
-    color: #383838;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 15px;
-    cursor: pointer;
-  
-    transition: color 0.5s;
-  }
-  
-  .popup .close-btn:hover{
-    color: #2a3e73  ;
-  }
-  
+
   .popup .form h2{
     text-align: center;
     color: #383838;

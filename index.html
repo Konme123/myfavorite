@@ -12,11 +12,8 @@
 </head>
 <body>
 
-    <iframe name="dummyframe" style="display: none;"></iframe>
 
-    
-<div id="header">
-     
+
     <nav> 
    
         <ul id="sidemenu">
@@ -26,11 +23,18 @@
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         <div class="center">
-        <button id="show-login"> LOG IN </button>
+    
+
+        
     </div>
     </nav>
 
 
+    
+
+    
+<div id="header">
+     
     
     <div class="container">
 
@@ -48,12 +52,11 @@
             <!--pop up--> 
         <div id="mydiv">
            
-      
+            
       
            <div class="popup">
           
           
-          <div class="close-btn">&times;</div>
           <div class="form">
             <h2> Log in </h2>
             <div class="form-element">
@@ -69,7 +72,7 @@
               <label for="remember-me">Remember me </label>
             </div>
             <div class="form-element">
-              <button>Sign In</button>
+              <button id="submit" onclick="submit()">Sign In</button>
             </div>
             <div class="form-element">
               <a href="#">Forgot password</a>
@@ -86,8 +89,10 @@
 
 
 </div>
+
+<div class="iframe">
 <!------about?-->
-</div>
+
 <div id="about">
     <div class="container">
         <div class="row">
@@ -106,7 +111,6 @@
 </div>
 <!--Article 2-->
 
-</div>
 <div id="about">
     <div class="container">
         <div class="row2">
@@ -122,13 +126,13 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <!--Article 3-->
 
-</div>
 <div id="about">
     <div class="container">
+        
         <div class="row3">
             </div>
             <div class="about-col-2">
@@ -142,11 +146,10 @@
 </div>
 
 
-
 <script src="./scripts/script.js"></script>
   </script>
 
-
+</div>
 </body>
 </html>     
 
