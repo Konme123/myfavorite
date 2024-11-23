@@ -1,6 +1,7 @@
-User: julius 
+User: julius
+
 Password: ilovefish
 
 
-Instruction
+Instruction:
 Press Email and Password to type
