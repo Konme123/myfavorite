@@ -4,4 +4,4 @@ Password: ilovefish
 
 
 Instruction:
-Press Email and Password to type
+Press the word Email  and Password to type
